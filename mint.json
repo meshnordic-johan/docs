@@ -7,9 +7,9 @@
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
+    "primary": "#61A925",
     "light": "#07C983",
-    "dark": "#0D9373",
+    "dark": "#1B1A1A",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:hello@meshnordic.ai"
     }
   ],
   "topbarCtaButton": {
