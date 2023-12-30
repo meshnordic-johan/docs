@@ -17,13 +17,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
+      "name": "E-mail support",
       "url": "mailto:hello@meshnordic.ai"
     }
   ],
   "topbarCtaButton": {
     "name": "Book a demo",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://meshnordic.weblium.site/book-demo"
   },
   "tabs": [
     {
@@ -44,7 +44,7 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Get started!",
       "pages": ["introduction", "quickstart", "development"]
     },
     {
