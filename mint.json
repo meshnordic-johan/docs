@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Mesh Nordic AI",
   "logo": {
-    "dark": "/logo/Mesh-logo-cropped-no-extra-space-and-no-borders-blackbg-small.png",
-    "light": "/logo/Mesh-logo-cropped-no-extra-space-and-no-borders-blackbg-small.png"
+    "dark": "logo/Mesh-logo-cropped-no-extra-space-and-no-borders-blackbg-small.png",
+    "light": "logo/Mesh-logo-cropped-no-extra-space-and-no-borders-blackbg-small.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -22,7 +22,7 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Book a demo",
     "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
@@ -37,19 +37,14 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
+      "name": "Documentation1",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": ""
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": ""
     }
   ],
   "navigation": [
@@ -58,20 +53,12 @@
       "pages": ["introduction", "quickstart", "development"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Integration guides",
+      "pages": ["integrations/shopify-guide", "integrations/woocommerce-guide", "integrations/product-feeds-guide", "integrations/headless-api-guide"]
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "url": ["https://amazon.1-staging.com/admin/dashboard/docs/api"]
     }
   ],
   "footerSocials": {
