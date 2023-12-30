@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Mesh Nordic AI",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "https://res2.weblium.site/res/63f3789ccd19e2000d2aa82e/6538d3781898be0017ab47cb_optimized",
+    "light": "https://res2.weblium.site/res/63f3789ccd19e2000d2aa82e/6538d3781898be0017ab47cb_optimized"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -71,8 +71,6 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "linkedin": "https://www.linkedin.com/company/mesh-nordic/"
   }
 }
