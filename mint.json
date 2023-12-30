@@ -27,7 +27,11 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "Guide: Shopify",
+      "url": "api-reference"
+    },
+    {
+      "name": "Guide: WooCommerce",
       "url": "api-reference"
     }
   ],
