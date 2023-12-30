@@ -40,16 +40,25 @@
       "name": "Documentation1",
       "icon": "book-open-cover",
       "url": ""
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": ""
     }
   ],
   "navigation": [
     {
-      "group": "Get started!",
+      "group": "Get Started",
       "pages": ["introduction", "quickstart", "development"]
     },
     {
       "group": "Integration guides",
       "pages": ["integrations/shopify-guide", "integrations/woocommerce-guide", "integrations/product-feeds-guide", "integrations/headless-api-guide"]
+    },
+    {
+      "group": "API Documentation",
+      "url": ["https://amazon.1-staging.com/admin/dashboard/docs/api"]
     }
   ],
   "footerSocials": {
