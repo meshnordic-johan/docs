@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Mesh Nordic AI",
   "logo": {
-    "dark": "https://res2.weblium.site/res/63f3789ccd19e2000d2aa82e/6538d3781898be0017ab47cb_optimized",
-    "light": "https://res2.weblium.site/res/63f3789ccd19e2000d2aa82e/6538d3781898be0017ab47cb_optimized"
+    "dark": "logo/Mesh-logo-cropped-no-extra-space-and-no-borders-blackbg-small.png",
+    "light": "logo/Mesh-logo-cropped-no-extra-space-and-no-borders-blackbg-small.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
