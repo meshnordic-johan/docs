@@ -23,16 +23,16 @@
   ],
   "topbarCtaButton": {
     "name": "Book a demo",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://meshnordic.weblium.site/book-demo"
   },
   "tabs": [
     {
-      "name": "Guide: Shopify",
-      "url": "api-reference"
+      "name": "AI Search",
+      "url": ""
     },
     {
-      "name": "Guide: WooCommerce",
-      "url": "api-reference"
+      "name": "AI Recommendations",
+      "url": ""
     }
   ],
   "anchors": [
@@ -40,25 +40,16 @@
       "name": "Documentation1",
       "icon": "book-open-cover",
       "url": ""
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": ""
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Get started!",
       "pages": ["introduction", "quickstart", "development"]
     },
     {
       "group": "Integration guides",
       "pages": ["integrations/shopify-guide", "integrations/woocommerce-guide", "integrations/product-feeds-guide", "integrations/headless-api-guide"]
-    },
-    {
-      "group": "API Documentation",
-      "url": ["https://amazon.1-staging.com/admin/dashboard/docs/api"]
     }
   ],
   "footerSocials": {
