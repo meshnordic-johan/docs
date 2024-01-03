@@ -8,25 +8,126 @@ description: 'How to connect Mesh Nordic AI to your e-commerce website using pro
 
 ## The basics
 
-Connect your e-commerce website to Mesh Nordic AI using product feeds.
+We support product feeds as JSON, CSV or XML. The feed should be refreshed at least every hour - otherwise it will take too much time for your product updates to take effect on your site.
 
-Do this:
+<tip>
+One feed per market
 
-- A
-- B
+If your site has multiple markets, you need to provide a product feed for each of them. Each feed should then contain the correct URLs, translations and prices for that market.
+</tip>
 
-
-## We support
-
-- Google Shopping Feed (https://support.google.com/merchants/answer/7052112?hl=en)
-- Meta Facebook feed (Instagram)
 
 
 <br/>
-## Quick start
+## Product feeds we support
 
-Hello, either:
+- Google Shopping Feed (https://support.google.com/merchants/answer/7052112?hl=en)
+- Meta Facebook and Instagram Shopping feed (https://www.facebook.com/business/help/2284463181837648?id=725943027795860 + 
+https://www.facebook.com/business/help/120325381656392?id=725943027795860)
+- Pricerunner feed (https://www.pricerunner.se/info/getting-started)
+- Prisjakt feed (https://support.prisjakt.nu/sv/articles/6175300-produkt-feeds-i-business-center)
 
-1. A
-2. B
-3. C
+
+
+<br/>
+## Product Feed specification
+
+### Mandatory product attributes
+These are attributes required by Depict for all products in your feed. These attributes are essential for the successful representation of your product data.
+
+The following table shows the minimum required product attributes, their accepted data types, and descriptions:
+
+
+
+<ResponseField name="Title" type="string" required>
+The product’s name. Example value: 'Blue Men's T-Shirt'.
+
+<ResponseField name="Product ID" type="string" required>
+Identify each product using the product ID attribute. This attribute must be unique across all of your products. This attribute should also be at the lowest possible level.If a T-shirt comes in sizes S,M,L, then each size should have its own product id. Example value: 'ABC1234'.
+
+<ResponseField name="SKU" type="string" required>
+A unique identifier for all possible variants of a product. This might be shared across products.If a T-shirt comes in sizes S,M,L they could share the same SKU but have different product IDs.This ID must be the same ID used in Google Analytics for transactions of this product. Example value: 'ABCD1234'.
+
+<ResponseField name="Item group ID" type="string" required>
+A unique identifier for each group of variants. The item group ID identifies a set of products that differ by one or more variant attributes, such as color, size, etc.If a T-shirt comes in sizes S,M,L and colors Black and White, the 6 products should have the same item group ID. Example value: 'ABCD12345'.
+
+
+<ResponseField name="Description" type="string" required>
+The product’s description. Describe each product clearly using the description attribute.Example value: Premium T-Shirt with loose fit for a carefree, comfortable look. Its heavyweight organic cotton fabric feels thick and soft. This product is made with at least 75% organic cotton fibers.
+
+<ResponseField name="Price" type="float" required>
+The product’s standard price. This value represents the price of the product in each market. Example value: 123.50.
+
+<ResponseField name="Sale price" type="float" required>
+The product’s sale price. If sale price does not apply, submit the same value as the price. Example value: 100.50.
+
+<ResponseField name="Currency" type="string" required>
+This value represents the currency of your defined product prices in each market. Example value: EUR.
+
+<ResponseField name="Main Image URL" type="string" required>
+The URL of the product’s main image.Example value: https://yourstore.com/img1.jpg.
+
+<ResponseField name="Additional image URL" type="string" required>
+A list of all image URLs associated with a product.Example value: https://yourstore.com/img1.jpg, https://yourstore.com/img2.jpg, https://yourstore.com/img3.jpg.
+
+<ResponseField name="Page URL" type="string" required>
+The URL of the product’s landing page.Example value: https://yourstore.com/t/mens-t-shirt-mkhTvc/ABC1234-667.
+
+<ResponseField name="Availability" type="boolean" required>
+The product’s availability. If this attribute is absent, Depict may recommend an out-of-stock item to a user.Example value: true.
+
+<ResponseField name="Category ids" type="string" required>
+Identifiers of the categories this product belongs to. Should match the ids in the category feed.
+
+
+<br/>
+### Optional product attributes
+
+Including these product attributes is optional for all merchants and depends on your product inventory. However, adding more features enables us to give a better user experience, as well as improving the output of the underlying algorithms.
+
+The following table shows these optional attributes, their accepted data types, and descriptions:
+
+<ResponseField name="Color" type="string" optional>
+The product’s color. The value is required for all products with different color variants. Example value: blue.
+
+<ResponseField name="Size" type="string" optional>
+The product’s size. This is a required value for all products with different size variants. Example value: XL.
+
+<ResponseField name="Gender parameters" type="string" optional>
+This is a required value for all products with gender-specific variants. Example value: Female.
+
+<ResponseField name="Age group" type="string" optional>
+This is a required value for all products with assigned age groups. Example value: kids.
+
+<ResponseField name="Brand" type="string" optional>
+The product’s brand name. Example value: Adidas.
+
+<ResponseField name="Series" type="string" optional>
+The product’s series. Example value: 2021 Off-White Track collection.
+
+<ResponseField name="Bundle" type="boolean" optional>
+Indicates whether or not this product represents a collection of different products. Example value: false.
+
+<ResponseField name="Pattern" type="string" optional>
+The product’s pattern. The value is required for all products with different pattern variants. Example value: striped.
+
+<ResponseField name="Add-to-cart product ID" type="string" optional>
+Used when adding items to cart on the frontend. Example value: ABC1234.
+
+<ResponseField name="Cost of goods sold" type="float" optional>
+The sum of all direct cost associated with sale of a product. Example value: 234.50.
+
+<ResponseField name="GTIN" type="string" optional>
+Include for all products with a known GTIN. Example value: 3275637890676.
+
+<ResponseField name="MPN" type="string" optional>
+Include for all products without a manufacturer-assigned GTIN. Example value: ABC-1243D-EF.
+
+<ResponseField name="Is second hand" type="bool" optional>
+Marks this product as being second hand. Example value: true.
+
+
+
+<br/>
+### Custom product attributes
+In addition to all the attributes listed above, you can also include completely custom attributes. This data will be stored alongside the product and can then be used to setup filters, rankings, and custom scoring.
